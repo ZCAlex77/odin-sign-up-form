@@ -1,4 +1,4 @@
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -7,25 +7,25 @@
 
 @font-face {
   font-family: "Norse Bold";
-  src: url('./assets/Norse-Bold.otf') format("opentype");
+  src: url("./assets/Norse-Bold.otf") format("opentype");
 }
 
-.flex-center{
+.flex-center {
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-body{
+body {
   width: 100vw;
   height: 100vh;
 }
 
-body > div{
+body > div {
   height: 100%;
 }
 
-.side-hero{
+.side-hero {
   background-image: url("./assets/halie-west-bTzpau9mKT4-unsplash.jpg");
   background-size: cover;
   flex-basis: 30%;
@@ -33,11 +33,12 @@ body > div{
   position: relative;
 }
 
-.logo, .credits{
+.logo,
+.credits {
   color: #fff;
 }
 
-.logo{
+.logo {
   background: #000a;
   width: 100%;
   font-family: "Norse Bold", serif;
@@ -45,37 +46,37 @@ body > div{
   font-size: 3.5rem;
 }
 
-.logo img{
+.logo img {
   width: 70px;
   height: auto;
 }
 
-.credits{
+.credits {
   position: absolute;
   bottom: 16px;
 }
 
-.container{
+.container {
   flex-basis: 70%;
   background-color: #fff;
   padding: 5% 0;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 
-.container > div{
+.container > div {
   padding: 0 32px;
 }
 
-.sign-up-form p{
+.sign-up-form p {
   font-weight: bold;
   width: 70%;
 }
 
-.sign-up-form p:nth-child(3){
+.sign-up-form p:nth-child(3) {
   margin-top: 16px;
 }
 
-#myform{
+#myform {
   display: grid;
   grid-template-columns: 1fr 1fr;
   width: 70%;
@@ -84,48 +85,39 @@ body > div{
   padding-bottom: 32px;
 }
 
-#myform h2{
+#myform h2 {
   font-weight: normal;
   grid-column: 1 / span 2;
   margin-bottom: 16px;
 }
 
-#myform input{
+#myform input {
   margin-bottom: 16px;
   height: 32px;
   padding: 0 10px;
   border-radius: 10px;
-  border: 1px solid #777;
+  border-width: 1px;
 }
 
-input:not(:placeholder-shown):invalid{
-  border: 1px solid red !important;
+input:not(:placeholder-shown):invalid {
+  border: 1px solid red;
 }
 
-input:not(:placeholder-shown):valid{
-  border: 1px solid green !important;
+input:not(:placeholder-shown):valid {
+  border: 1px solid green;
 }
 
-input[type="password"]:invalid::after{
-  content: "Passwords do not match.";
-  color: red;
-  width: 100px;
-  height: 20px;
-  position: absolute;
-  top: 32px;
-}
-
-.mobile-label{
+.mobile-label {
   display: none;
 }
 
-#myform label{
+#myform label {
   font-weight: bold;
   padding: 5px 0;
-  font-size: .8rem;
+  font-size: 0.8rem;
 }
 
-button[type="submit"]{
+button[type="submit"] {
   background: #5c7a53;
   color: #fff;
   padding: 8px 32px;
@@ -136,71 +128,75 @@ button[type="submit"]{
   margin-bottom: 32px;
 }
 
-button + p{
+button + p {
   font-weight: bold;
 }
 
-button + p > a{
+button + p > a {
   color: #5c7a53;
   text-decoration: none;
   cursor: pointer;
 }
 
-.sign-up-form{
+.sign-up-form {
   box-shadow: 0 10px 15px -5px gray;
 }
 
-@media (max-width: 800px){
-  .flex-center{
+@media (max-width: 800px) {
+  .flex-center {
     flex-direction: column;
     display: block;
   }
-  .container, .container > div, #myform{
+  .container,
+  .container > div,
+  #myform {
     display: flex;
     flex-direction: column;
     align-items: center;
   }
-  .side-hero, .sign-up-form p, #myform{
+  .side-hero,
+  .sign-up-form p,
+  #myform {
     width: 100%;
   }
-  body{
+  body {
     height: auto;
   }
-  .side-hero{
+  .side-hero {
     display: flex;
     height: 50vh;
   }
-  .side-hero h1{
+  .side-hero h1 {
     display: flex;
     flex-direction: row;
   }
-  .container{
+  .container {
     justify-content: flex-start;
     padding: 0 0 32px 0;
   }
-  .sign-up-form p{
+  .sign-up-form p {
     padding: 0 16px;
   }
-  #myform{
+  #myform {
     padding: 0;
   }
-  #myform input{
+  #myform input {
     width: 50%;
   }
-  #myform label:nth-of-type(2n){
+  #myform label:nth-of-type(2n) {
     display: none;
   }
-  .mobile-label{
+  .mobile-label {
     display: block;
   }
-  .container > div{
+  .container > div {
     margin-top: 64px;
     padding: 0;
   }
 }
 
-@media (max-width: 500px){
-  #myform input{
+@media (max-width: 500px) {
+  #myform input {
     width: 80%;
   }
 }
