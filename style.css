@@ -98,6 +98,23 @@ body > div{
   border: 1px solid #777;
 }
 
+input:not(:placeholder-shown):invalid{
+  border: 1px solid red !important;
+}
+
+input:not(:placeholder-shown):valid{
+  border: 1px solid green !important;
+}
+
+input[type="password"]:invalid::after{
+  content: "Passwords do not match.";
+  color: red;
+  width: 100px;
+  height: 20px;
+  position: absolute;
+  top: 32px;
+}
+
 #myform label{
   font-weight: bold;
   padding: 5px 0;
