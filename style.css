@@ -10,7 +10,7 @@
   src: url('./assets/Norse-Bold.otf') format("opentype");
 }
 
-:where(.flex-center){
+.flex-center{
   display: flex;
   align-items: center;
   justify-content: center;
@@ -115,6 +115,10 @@ input[type="password"]:invalid::after{
   top: 32px;
 }
 
+.mobile-label{
+  display: none;
+}
+
 #myform label{
   font-weight: bold;
   padding: 5px 0;
@@ -144,4 +148,59 @@ button + p > a{
 
 .sign-up-form{
   box-shadow: 0 10px 15px -5px gray;
+}
+
+@media (max-width: 800px){
+  .flex-center{
+    flex-direction: column;
+    display: block;
+  }
+  .container, .container > div, #myform{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .side-hero, .sign-up-form p, #myform{
+    width: 100%;
+  }
+  body{
+    height: auto;
+  }
+  .side-hero{
+    display: flex;
+    height: 50vh;
+  }
+  .side-hero h1{
+    display: flex;
+    flex-direction: row;
+  }
+  .container{
+    justify-content: flex-start;
+    padding: 0 0 32px 0;
+  }
+  .sign-up-form p{
+    padding: 0 16px;
+  }
+  #myform{
+    padding: 0;
+  }
+  #myform input{
+    width: 50%;
+  }
+  #myform label:nth-of-type(2n){
+    display: none;
+  }
+  .mobile-label{
+    display: block;
+  }
+  .container > div{
+    margin-top: 64px;
+    padding: 0;
+  }
+}
+
+@media (max-width: 500px){
+  #myform input{
+    width: 80%;
+  }
 }
