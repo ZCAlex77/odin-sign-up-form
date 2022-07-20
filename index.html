@@ -35,20 +35,20 @@
       <form id="myform">
         <h2>Let's do this!</h2>
         <label for="first-name">FIRST NAME</label>
-        <input type="text" name="first-name" id="first-name" />
         <label for="last-name">LAST NAME</label>
-        <input type="text" name="last-name" id="last-name" />
+        <input type="text" name="first-name" id="first-name" maxlength="50" />
+        <input type="text" name="last-name" id="last-name" maxlength="50" />
         <label for="email">EMAIL</label>
-        <input type="email" name="email" id="email" />
         <label for="tel">PHONE NUMBER</label>
+        <input type="email" name="email" id="email" maxlength="50" />
         <input type="tel" name="tel" id="tel" />
         <label for="password">PASSWORD</label>
-        <input type="password" name="password" id="password" />
         <label for="confirm-password">CONFIRM PASSWORD</label>
-        <input type="password" name="confirm-password" id="confirm-password" />
+        <input type="password" name="password" id="password" minlength="8" />
+        <input type="password" name="confirm-password" id="confirm-password" minlength="8" />
       </form>
       <div>
-        <button type="submit">Create Account</button>
+        <button type="submit" form="myform">Create Account</button>
         <p>Already have an account? <a href="#">Log in</a></p>
       </div>
     </div>

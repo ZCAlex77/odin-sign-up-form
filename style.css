@@ -58,7 +58,7 @@ body > div{
 .sign-up-form{
   flex-basis: 70%;
   background-color: #fff;
-  padding: 10% 32px;
+  padding: 5% 32px;
   font-family: 'Roboto', sans-serif;
 }
 
@@ -69,4 +69,47 @@ body > div{
 
 .sign-up-form p:nth-child(3){
   margin-top: 16px;
+}
+
+#myform{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 70%;
+  gap: 0 32px;
+  margin: 32px 0;
+}
+
+#myform h2{
+  font-weight: normal;
+  grid-column: 1 / span 2;
+  margin-bottom: 16px;
+}
+
+#myform input{
+  margin-bottom: 16px;
+  height: 32px;
+  padding: 0 10px;
+  border-radius: 10px;
+  border: 1px solid #777;
+}
+
+#myform label{
+  font-weight: bold;
+}
+
+button[type="submit"]{
+  background: #707e6c;
+  color: #fff;
+  padding: 8px 32px;
+  font-size: 1.4rem;
+  border: 0;
+  border-radius: 10px;
+  cursor: pointer;
+  margin-bottom: 32px;
+}
+
+button + p > a{
+  color: #707e6c;
+  text-decoration: none;
+  cursor: pointer;
 }
