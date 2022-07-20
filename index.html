@@ -4,12 +4,14 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" />
     <title>Odin sign-up form</title>
   </head>
   <body class="flex-center">
     <div class="side-hero flex-center">
-      <h1 class="logo flex-center"><img src="./assets/odin-lined.png" alt="odin logo" />ODIN</h1>
+      <h1 class="logo flex-center">
+        <img src="./assets/odin-lined.png" alt="odin logo" />ODIN
+      </h1>
       <p class="credits">
         Photo by
         <a
@@ -23,30 +25,56 @@
         >
       </p>
     </div>
-    <div class="sign-up-form">
-      <div>
-        <p>
-          This is not a real online service! You know you need something like
-          this in your life to help you realize your deepest dreams.
-        </p>
-        <p>Sign up <em>now</em> to get started.</p>
-        <p>You <em>know</em> you want to.</p>
+    <div class="container">
+      <div class="sign-up-form">
+        <div>
+          <p>
+            This is not a real online service! You know you need something like
+            this in your life to help you realize your deepest dreams.
+          </p>
+          <p>Sign up <em>now</em> to get started.</p>
+          <p>You <em>know</em> you want to.</p>
+        </div>
+        <form id="myform">
+          <h2>Let's do this!</h2>
+          <label for="first-name">FIRST NAME</label>
+          <label for="last-name">LAST NAME</label>
+          <input
+            type="text"
+            name="first-name"
+            id="first-name"
+            maxlength="50"
+            required
+          />
+          <input
+            type="text"
+            name="last-name"
+            id="last-name"
+            maxlength="50"
+            required
+          />
+          <label for="email">EMAIL</label>
+          <label for="tel">PHONE NUMBER</label>
+          <input type="email" name="email" id="email" maxlength="50" required />
+          <input type="tel" name="tel" id="tel" />
+          <label for="password">PASSWORD</label>
+          <label for="confirm-password">CONFIRM PASSWORD</label>
+          <input
+            type="password"
+            name="password"
+            id="password"
+            minlength="8"
+            required
+          />
+          <input
+            type="password"
+            name="confirm-password"
+            id="confirm-password"
+            minlength="8"
+            required
+          />
+        </form>
       </div>
-      <form id="myform">
-        <h2>Let's do this!</h2>
-        <label for="first-name">FIRST NAME</label>
-        <label for="last-name">LAST NAME</label>
-        <input type="text" name="first-name" id="first-name" maxlength="50" />
-        <input type="text" name="last-name" id="last-name" maxlength="50" />
-        <label for="email">EMAIL</label>
-        <label for="tel">PHONE NUMBER</label>
-        <input type="email" name="email" id="email" maxlength="50" />
-        <input type="tel" name="tel" id="tel" />
-        <label for="password">PASSWORD</label>
-        <label for="confirm-password">CONFIRM PASSWORD</label>
-        <input type="password" name="password" id="password" minlength="8" />
-        <input type="password" name="confirm-password" id="confirm-password" minlength="8" />
-      </form>
       <div>
         <button type="submit" form="myform">Create Account</button>
         <p>Already have an account? <a href="#">Log in</a></p>

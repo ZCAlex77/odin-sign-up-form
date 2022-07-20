@@ -55,11 +55,15 @@ body > div{
   bottom: 16px;
 }
 
-.sign-up-form{
+.container{
   flex-basis: 70%;
   background-color: #fff;
-  padding: 5% 32px;
+  padding: 5% 0;
   font-family: 'Roboto', sans-serif;
+}
+
+.container > div{
+  padding: 0 32px;
 }
 
 .sign-up-form p{
@@ -77,6 +81,7 @@ body > div{
   width: 70%;
   gap: 0 32px;
   margin: 32px 0;
+  padding-bottom: 32px;
 }
 
 #myform h2{
@@ -95,21 +100,31 @@ body > div{
 
 #myform label{
   font-weight: bold;
+  padding: 5px 0;
+  font-size: .8rem;
 }
 
 button[type="submit"]{
-  background: #707e6c;
+  background: #5c7a53;
   color: #fff;
   padding: 8px 32px;
-  font-size: 1.4rem;
+  font-size: 1.3rem;
   border: 0;
   border-radius: 10px;
   cursor: pointer;
   margin-bottom: 32px;
 }
 
+button + p{
+  font-weight: bold;
+}
+
 button + p > a{
-  color: #707e6c;
+  color: #5c7a53;
   text-decoration: none;
   cursor: pointer;
+}
+
+.sign-up-form{
+  box-shadow: 0 10px 15px -5px gray;
 }
